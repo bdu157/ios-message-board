@@ -15,7 +15,7 @@ class MessageThreadController {
     
     func createMessageThread(title: String, completion: @escaping (Error?) -> Void) {
        
-        let messageThread = MessageThread(title: title)
+        let messageThread = MessageThread(title: title)   //we initialize here so we can create new data and we have access to identifier for the "location"
         
         let url = MessageThreadController.baseURL.appendingPathComponent(messageThread.identifier).appendingPathExtension("json")
         
