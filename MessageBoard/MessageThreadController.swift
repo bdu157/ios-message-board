@@ -42,4 +42,4 @@ class MessageThreadController {
             completion(nil)
             }.resume()
         }
-    }
+}

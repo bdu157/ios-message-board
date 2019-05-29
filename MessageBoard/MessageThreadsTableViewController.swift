@@ -54,6 +54,7 @@ class MessageThreadsTableViewController: UITableViewController {
         messsageThreadController.createMessageThread(title: textInput) { (_) in
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                self.textField.text = nil
             }
         }
     }

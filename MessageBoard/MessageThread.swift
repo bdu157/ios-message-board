@@ -39,9 +39,8 @@ class MessageThread: Equatable, Codable {
         
     }
     
-    
-    func createMessage(messageThread: MessageThread, text: String, sender: String, completetion: @escaping (Error?) -> Void) {
-        let messages = MessageThread.Message.init(text: text, sender: sender)
+    func createMessage(messageThread: MessageThread, text: String, sender: String, completion: @escaping (Error?) -> Void) {
+        let messages = MessageThread.Message.init(text: text, sender: sender)   //to access to Message object class MessageThread should be acccessible that is why this method is placed within MessageThread class
         
         let url = MessageThreadController.baseURL.appendingPathComponent(messageThread.identifier).appendingPathComponent("messages").appendingPathExtension("json")   //messages should match MessageThread.messages
         
@@ -50,24 +49,24 @@ class MessageThread: Equatable, Codable {
         
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
-     
+        
         do {
             let encoder = JSONEncoder()
             request.httpBody = try encoder.encode(messages)
         } catch {
             print(error)
-            completetion(error)
+            completion(error)
         }
         
         URLSession.shared.dataTask(with: request) { (_, _, error) in
             if let error = error {
                 print(error)
-                completetion(error)
+                completion(error)
                 return
             }
             
-            messageThread.messages.append(messages)   //we do not need to add self here because messageThread is a class 
-            completetion(nil)
-        }.resume()
+            messageThread.messages.append(messages)   //we do not need to add self here because messageThread is a class
+            completion(nil)
+            }.resume()
     }
 }
