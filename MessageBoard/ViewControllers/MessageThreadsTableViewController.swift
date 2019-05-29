@@ -15,6 +15,22 @@ class MessageThreadsTableViewController: UITableViewController {
     
     @IBOutlet weak var textField: UITextField!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        messsageThreadController.fetchMessageThreads { (error) in
+            if let error = error {
+                print(error)
+                return
+            } else {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()   //you have to give self because this is within closure
+                }
+            }
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
