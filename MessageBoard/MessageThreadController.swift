@@ -11,11 +11,11 @@ import Foundation
 class MessageThreadController {
     var messageThreads: [MessageThread] = []
     
-    static let baseURL = URL(string: "https://lambda-message-board.firebaseio.com/")! //you must call MessageThreadController to access to baseURL
+    static let baseURL = URL(string: "https://message-board-b0673.firebaseio.com/")! //you must call MessageThreadController to access to baseURL
     
     func createMessageThread(title: String, completion: @escaping (Error?) -> Void) {
        
-        let messageThread = MessageThread(title: title)   //we initialize here so we can create new data and we have access to identifier for the "location"
+        let messageThread = MessageThread.init(title: title)   //we initialize here so we can create new data and we have access to identifier for the "location"
         
         let url = MessageThreadController.baseURL.appendingPathComponent(messageThread.identifier).appendingPathExtension("json")
         
@@ -31,15 +31,16 @@ class MessageThreadController {
             return
         }
         
-        URLSession.shared.dataTask(with: url) { (_, _, error) in
+        URLSession.shared.dataTask(with: request) { (_, _, error) in
             if let error = error {
-                NSLog("Error : \(error)")
+                print("Error : \(error)")
                 completion(error)
                 return
             }
            
             self.messageThreads.append(messageThread)
             completion(nil)
+            
             }.resume()
         }
 }

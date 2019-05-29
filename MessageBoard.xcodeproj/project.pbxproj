@@ -70,11 +70,11 @@
 				0B799424229D1BC50062765E /* Assets.xcassets */,
 				0B799426229D1BC50062765E /* LaunchScreen.storyboard */,
 				0B799429229D1BC50062765E /* Info.plist */,
-				0B598B67229E05C300C6A359 /* MessageThreadsTableViewController.swift */,
 				0B598B69229E073600C6A359 /* MessageThreadDetailTableViewController.swift */,
+				0B598B67229E05C300C6A359 /* MessageThreadsTableViewController.swift */,
 				0B598B6B229E088500C6A359 /* MessageDetailViewController.swift */,
-				0B598B6D229E0A4100C6A359 /* MessageThread.swift */,
 				0B598B6F229E0EAC00C6A359 /* MessageThreadController.swift */,
+				0B598B6D229E0A4100C6A359 /* MessageThread.swift */,
 			);
 			path = MessageBoard;
 			sourceTree = "<group>";

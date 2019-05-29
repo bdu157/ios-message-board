@@ -51,10 +51,17 @@ class MessageThreadsTableViewController: UITableViewController {
     
     @IBAction func textFieldAction(_ sender: Any) {
         guard let textInput = textField.text else {return}
-        messsageThreadController.createMessageThread(title: textInput) { (_) in
+        messsageThreadController.createMessageThread(title: textInput) { (error) in
+            if let error = error {
+                print(error)
+                return
+                
+            } else {
+                
             DispatchQueue.main.async {
                 self.tableView.reloadData()
                 self.textField.text = nil
+                }
             }
         }
     }
