@@ -35,8 +35,6 @@ class MessageThreadsTableViewController: UITableViewController {
         cell.textLabel?.text = messageThread.title
         return cell
     }
- 
-
 
     // MARK: - Navigation
 
@@ -59,7 +57,5 @@ class MessageThreadsTableViewController: UITableViewController {
             }
         }
     }
-    
-    
     
 }
