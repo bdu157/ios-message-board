@@ -11,6 +11,7 @@
 		0B598B6A229E073600C6A359 /* MessageThreadDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B598B69229E073600C6A359 /* MessageThreadDetailTableViewController.swift */; };
 		0B598B6C229E088500C6A359 /* MessageDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B598B6B229E088500C6A359 /* MessageDetailViewController.swift */; };
 		0B598B6E229E0A4100C6A359 /* MessageThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B598B6D229E0A4100C6A359 /* MessageThread.swift */; };
+		0B598B70229E0EAC00C6A359 /* MessageThreadController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B598B6F229E0EAC00C6A359 /* MessageThreadController.swift */; };
 		0B79941E229D1BC40062765E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79941D229D1BC40062765E /* AppDelegate.swift */; };
 		0B799420229D1BC40062765E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B79941F229D1BC40062765E /* ViewController.swift */; };
 		0B799423229D1BC40062765E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B799421229D1BC40062765E /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 		0B598B69229E073600C6A359 /* MessageThreadDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadDetailTableViewController.swift; sourceTree = "<group>"; };
 		0B598B6B229E088500C6A359 /* MessageDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailViewController.swift; sourceTree = "<group>"; };
 		0B598B6D229E0A4100C6A359 /* MessageThread.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThread.swift; sourceTree = "<group>"; };
+		0B598B6F229E0EAC00C6A359 /* MessageThreadController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageThreadController.swift; sourceTree = "<group>"; };
 		0B79941A229D1BC40062765E /* MessageBoard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageBoard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B79941D229D1BC40062765E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B79941F229D1BC40062765E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				0B598B69229E073600C6A359 /* MessageThreadDetailTableViewController.swift */,
 				0B598B6B229E088500C6A359 /* MessageDetailViewController.swift */,
 				0B598B6D229E0A4100C6A359 /* MessageThread.swift */,
+				0B598B6F229E0EAC00C6A359 /* MessageThreadController.swift */,
 			);
 			path = MessageBoard;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				0B598B6C229E088500C6A359 /* MessageDetailViewController.swift in Sources */,
 				0B598B6A229E073600C6A359 /* MessageThreadDetailTableViewController.swift in Sources */,
 				0B79941E229D1BC40062765E /* AppDelegate.swift in Sources */,
+				0B598B70229E0EAC00C6A359 /* MessageThreadController.swift in Sources */,
 				0B598B6E229E0A4100C6A359 /* MessageThread.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
